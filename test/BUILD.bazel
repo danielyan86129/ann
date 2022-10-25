@@ -1,0 +1,17 @@
+cc_library(
+    name = "libtest",
+    srcs = glob(
+        ["*.cpp"],
+        exclude = ["ann_test.cpp"],
+    ),
+    hdrs = glob(["*.h"]),
+    includes = ["."],
+    visibility = ["//:__pkg__"],
+    deps = ["//src:libann"],
+)
+
+cc_binary(
+    name = "ann_test",
+    srcs = glob(["*.cpp"]),
+    deps = [":libtest"],
+)
