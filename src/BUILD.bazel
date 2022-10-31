@@ -1,11 +1,13 @@
+package(default_visibility = ["//visibility:public"])
+
 cc_library(
     name = "libann",
     srcs = glob(["*.cpp"]),
     hdrs = glob(["*.h"]),
     includes = ["."],
-    visibility = [
-        "//sample:__pkg__",
-        "//test:__pkg__",
-    ],
+    # visibility = [
+    #     "//sample:__pkg__",
+    #     "//test:__pkg__",
+    # ],
     deps = ["//include:ann_include"],
 )
