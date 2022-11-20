@@ -1,12 +1,9 @@
+package(default_visibility = ["//visibility:public"])
+
 cc_library(
     name = "ann_include",
     hdrs = glob(["**/*.h"]),
     # include_prefix = "ANN",
     includes = ["."],
     # linkopts = linkopts,
-    visibility = [
-        "//sample:__pkg__",
-        "//src:__pkg__",
-        "//test:__pkg__",
-    ],
 )
