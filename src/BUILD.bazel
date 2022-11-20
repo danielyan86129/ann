@@ -1,9 +1,12 @@
 package(default_visibility = ["//visibility:public"])
 
+# print(glob(["*.cpp"]))
+
 cc_library(
     name = "libann",
     srcs = glob(["*.cpp"]),
     hdrs = glob(["*.h"]),
+    copts = ["-std=c++98"],
     includes = ["."],
     # visibility = [
     #     "//sample:__pkg__",

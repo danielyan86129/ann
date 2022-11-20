@@ -1,9 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
+# exposes the actua lib defined in src
 cc_library(
     name = "libann",
-    srcs = glob(["src/*.cpp"]),
-    hdrs = glob(["src/*.h"]),
-    copts = ["-std=c++98"],
-    deps = ["//include:ann_include"],
+    deps = ["//src:libann"],
 )
